@@ -1,12 +1,13 @@
+# Core dependencies
 streamlit==1.39.0
 pandas==2.2.3
 numpy==1.26.4
 scikit-learn==1.5.2
 joblib==1.4.2
-# Optional ML libraries (uncomment if needed)
-# xgboost==2.1.1
-# lightgbm==4.3.0
-# catboost==1.2.7
-keras
-tensorflow
 
+# Deep Learning (CPU optimized to reduce memory usage)
+tensorflow-cpu==2.17.0
+keras==3.5.0
+
+# Optional visualization / utility libraries
+matplotlib==3.9.2
