@@ -1,14 +1,25 @@
 import streamlit as st
-import crop_recommendation
-import yield_prediction
+from crop_recommendation import show_recommendation_page
+from yield_prediction import show_yield_page
 
-st.set_page_config(page_title="AgriSmart Dashboard", page_icon="🌾", layout="centered")
+# App Configuration
+st.set_page_config(
+    page_title="AgriSmart Dashboard",
+    page_icon="🌾",
+    layout="centered"
+)
 
+# Sidebar Navigation
 st.sidebar.title("🌿 AgriSmart Menu")
 page = st.sidebar.radio("Choose a module:", ["Crop Recommendation", "Crop Yield Prediction"])
 
+# Routing
 if page == "Crop Recommendation":
-    crop_recommendation.show_recommendation_page()
+    show_recommendation_page()
 
 elif page == "Crop Yield Prediction":
-    yield_prediction.show_yield_page()
+    show_yield_page()
+
+# Footer (Optional)
+st.markdown("---")
+st.markdown("**AgriSmart 🌾 | Smart Agriculture Insights**")
